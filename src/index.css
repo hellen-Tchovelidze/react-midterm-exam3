@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+#root{
+    background: var(--Dark-Blue, #10141E);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   overflow-y: auto;
+}
+
+
+#root::-webkit-scrollbar {
+    width: 2px;
+  }
+  
+  /* სკროლის ღია ნაცრისფერი ფერი */
+  #root::-webkit-scrollbar-thumb {
+    background-color: #b0b0b0; /* ღია ნაცრისფერი */
+    border-radius: 10px;
+  }
