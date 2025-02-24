@@ -445,9 +445,9 @@
       "title": "Mission: Saturn",
       "thumbnail": {
         "regular": {
-          "small": "./public/thumbnails/mission-saturn/regular/small.jpg",
-          "medium": "./public/thumbnails/mission-saturn/regular/medium.jpg",
-          "large": "./public/thumbnails/mission-saturn/regular/large.jpg"
+          "small": "/thumbnails/mission-saturn/regular/small.jpg",
+          "medium": "/thumbnails/mission-saturn/regular/medium.jpg",
+          "large": "/thumbnails/mission-saturn/regular/large.jpg"
         }
       },
       "year": 2017,
