@@ -1,7 +1,7 @@
 
 import './App.css'
-import SignUp from './components/__moleculos/SignUp/SignUp'
-import MovieList from './components/__organisms/MovieList/MovieList'
+import Login from './components/__moleculos/Login/Login'
+
 
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-     <SignUp />
+<Login />
  
     </>
   )

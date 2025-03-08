@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Login from "../Login/Login";
 import Button from "../../__atoms/Button/Button";
+import movie from '../../../assets/images/Movie.png'
 
 function SignUp() {
   const [showLogin, setShowLogin] = useState(false);
@@ -86,15 +87,18 @@ function SignUp() {
   }
 
   return (
-    <div className="w-[400px] h-[480px] flex flex-col justify-evenly items-center bg-[#161D2F] p-5 rounded-lg">
+    <div className=" flex flex-col justify-between items-center gap-2">
+    <img src={movie} alt=""  className=" w-[32px] h-[30px]"/>
+    <div className="w-[400px] h-[480px] flex flex-col justify-evenly items-center bg-[#161D2F] p-5 rounded-lg max-sm:w-[327px] ">
+
       <h1 className="text-2xl text-white">Sign Up</h1>
       {errorMessage && <p className="text-red-500">{errorMessage}</p>}
-      <form onSubmit={handleSubmit} className="flex flex-col">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-3.5">
         <input
           type="email"
           name="email"
           placeholder="Email address"
-          className={`flex justify-center items-start p-2.5 border-b w-[336px] h-[56px] bg-transparent outline-none ${
+          className={`flex justify-center items-start p-2.5 border-b w-[336px] h-[56px] bg-transparent outline-none  max-sm:w-[300px] ${
             errors.email
               ? "text-red-500 placeholder-red-500 border-red-500"
               : "text-white"
@@ -106,7 +110,7 @@ function SignUp() {
           type="password"
           name="password"
           placeholder="Password"
-          className={`flex justify-center items-start p-2.5 border-b w-[336px] h-[56px] bg-transparent outline-none ${
+          className={`flex justify-center items-start p-2.5 border-b w-[336px] h-[56px] bg-transparent outline-none max-sm:w-[300px]  ${
             errors.password
               ? "text-red-500 placeholder-red-500 border-red-500"
               : "text-white"
@@ -118,7 +122,7 @@ function SignUp() {
           type="password"
           name="repeatPassword"
           placeholder="Repeat password"
-          className={`flex justify-center items-start p-2.5 border-b w-[336px] h-[56px] bg-transparent outline-none ${
+          className={`flex justify-center items-start p-2.5 border-b w-[336px] h-[56px] bg-transparent outline-none max-sm:w-[300px] ${
             errors.repeatPassword
               ? "text-red-500 placeholder-red-500 border-red-500"
               : "text-white"
@@ -134,6 +138,7 @@ function SignUp() {
           Login
         </button>
       </div>
+    </div>
     </div>
   );
 }
