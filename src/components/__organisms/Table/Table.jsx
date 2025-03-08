@@ -18,28 +18,29 @@ const Tabs = ({ activeTab, onTabClick }) => {
     <div className="flex justify-between p-5 flex-col items-center h-[990px] w-[96px] bg-[#161D2F] rounded-[20px] max-md:w-full max-md:h-[70px] max-md:flex-row">
       <div className="flex flex-col justify-between items-center gap-[50px] max-md:flex-row max-md:justify-between max-md:items-center">
         <div className="flex flex-col justify-center items-center w-[32px]">
-          <img src={Movie} alt="" />
+          <img src={Movie} alt="" className=" cursor-pointer" />
         </div>
-        <div className="flex flex-col w-[20px] h-[200px] justify-between items-center mt-6 max-md:flex-row max-md:w-[200px] max-md:h-[20px] max-md:mb-5 max-sm:w-[150px]">
+        <div className="flex flex-col w-[20px] h-[200px] justify-between items-center mt-6 max-md:flex-row max-md:w-[200px] max-md:h-[20px] max-md:mb-5 max-sm:w-[150px] ">
           <button onClick={() => onTabClick("all")}>
-            <img src={activeTab === "all" ? AllIconeActive : AllIcone} alt="" />
+            <img src={activeTab === "all" ? AllIconeActive : AllIcone} alt=""  className=" cursor-pointer" />
           </button>
           <button onClick={() => onTabClick("Movie")}>
             <img
               src={activeTab === "Movie" ? MovieIconeActive : MovieIcone}
               alt=""
+              className=" cursor-pointer"
             />
           </button>
           <button onClick={() => onTabClick("TV Series")}>
             <img
               src={activeTab === "TV Series" ? TViconeActive : TVicone}
-              alt=""
+              alt="" className=" cursor-pointer"
             />
           </button>
           <button onClick={() => onTabClick("favorites")}>
             <img
               src={activeTab === "favorites" ? SaveIconeActive : SaveIcone}
-              alt=""
+              alt="" className=" cursor-pointer"
             />
           </button>
         </div>
