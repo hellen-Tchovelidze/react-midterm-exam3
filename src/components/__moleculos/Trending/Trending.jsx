@@ -16,18 +16,15 @@ function Trending() {
             <h1 className="text-2xl text-white">Trending</h1>
             <Swiper
                 modules={[Navigation, Pagination]}
-                spaceBetween={10}
-                slidesPerView={2.5} 
+                spaceBetween={20}
+                slidesPerView={1.5} 
                 loop={true}
                 className="w-full"
                 breakpoints={{
-                    508: { 
-                        slidesPerView: 2,
-                        spaceBetween: 0,
-                    },
+                  
                     480: { 
-                        slidesPerView: 1.5,
-                        spaceBetween: 0,
+                        slidesPerView: 2.5
+                       
                     }
                 }}
             >
@@ -35,13 +32,13 @@ function Trending() {
                     .filter(movie => movie.isTrending === true)
                     .map((movie, i) => (
                         <SwiperSlide key={i} className="flex-shrink-0 w-[470px]">
-                            <div className="group flex flex-col w-[470px] h-[230px] cursor-pointer relative max-md:w-[240px] max-md:h-[140px]">
+                            <div className="group flex flex-col  h-[230px] cursor-pointer relative max-md:w-[240px] max-md:h-[140px]">
                                 
                                 <div className="relative w-full h-full">
                                     <img 
                                         src={movie.thumbnail.regular.small} 
                                         alt={movie.title} 
-                                        className="rounded-lg w-full h-full"
+                                        className="rounded-lg w-[100%] h-full"
                                     />
                                     
                                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300 rounded-lg">
